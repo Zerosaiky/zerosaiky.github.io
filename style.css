@@ -13,11 +13,19 @@ body {
 .inner {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 200px 200px;
+}
+
+.examples-heading {
+    text-align: center;
+}
+.examples-heading h2 {
+    font-size: 40px; 
+    color: #333; 
 }
 
 .img {
 	width: 150px;
+	height: 150px;
 }
 
 .item {
@@ -34,6 +42,19 @@ body {
 	text-transform: uppercase;
 	font-weight: 700;
 	transition: background .2s linear;
+	margin: 15px;
+}
+
+.textMix{
+	margin-top: 7px;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.textMix2{
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-size: 40px;
 }
 
 .btn:hover {
@@ -43,3 +64,4 @@ body {
 .usercard {
 	text-align: center;
 }
+

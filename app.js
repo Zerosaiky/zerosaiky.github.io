@@ -10,6 +10,25 @@ let item = "";
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 
+
+let currentAudio = null;
+
+function playAudio(id) {
+    var audio = document.getElementById(id);
+
+    if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause(); // Остановить предыдущее аудио, если оно существует и не равно текущему аудио
+        currentAudio.currentTime = 0; // Сбросить позицию воспроизведения к началу
+    }
+
+    if (audio.paused) {
+        audio.play();
+        currentAudio = audio;
+    } else {
+        audio.pause();
+    }
+}
+
 btn1.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
